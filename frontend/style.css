@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #333;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    background: white;
+    margin: 10px auto;
+    padding: 12px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    gap: 10px;
+
+    /* NEW */
+    animation: fadeIn 0.3s ease;
+    transition: all 0.2s ease;
+}
+
+li span {
+    flex: 1;
+    text-align: left;
+    white-space: nowrap;
+}
+
+li div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+li div:last-child {
+    flex-shrink: 0;
+}
+
+li button {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+li div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.filter-buttons button {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.filter-buttons button:hover {
+    background-color: #ccc;
+}
+
+/* Add Task button */
+.top-bar button:first-of-type {
+    background-color: #2e7d32;
+}
+
+/* Complete button */
+.complete-btn {
+    background-color: #4CAF50;
+}
+
+/* Undo button */
+.undo-btn {
+    background-color: #ff9800;
+}
+
+/* Delete button */
+.delete-btn {
+    background-color: #e53935;
+}
+
+/* Edit button */
+.edit-btn {
+    background-color: #1976d2;
+}
+
+.filter-btn {
+    background-color: #ddd;
+    color: black;
+}
+
+.filter-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.top-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.top-bar input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.top-bar button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #4CAF50;
+    color: white;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.priority-tag {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: white;
+    margin-left: 8px;
+    flex-shrink: 0;
+}
+
+/* Colors */
+.priority-tag.low {
+    background-color: #4CAF50;
+}
+
+.priority-tag.medium {
+    background-color: #ff9800;
+}
+
+.priority-tag.high {
+    background-color: #e53935;
+}
+
+small {
+    color: #666;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+
+    .top-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .top-bar input,
+    .top-bar select,
+    .top-bar button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li div:first-child {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li div:last-child {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .filter-buttons {
+        flex-wrap: wrap;
+    }
+}

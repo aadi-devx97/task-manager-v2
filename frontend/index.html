@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Task Manager</h1>
+
+    <div class="top-bar">
+        <input type="text" id="taskInput" placeholder="Enter task..." />
+        <select id="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <button id="addBtn">Add</button>
+    </div>
+
+    <p id="suggestionText" style="text-align:center; color:#555;"></p>
+
+    <input type="text" id="searchInput" placeholder="Search task..." style="margin-top:10px; padding:10px; width:220px;">
+
+    <div class="filter-buttons">
+        <button class="filter-btn" id="allBtn">All</button>
+        <button class="filter-btn" id="completedBtn">Completed</button>
+        <button class="filter-btn" id="pendingBtn">Pending</button>
+    </div>
+
+    <p id="statusText" style="text-align:center; opacity:0.7;"></p>
+
+    <ul id="apiList"></ul>
+
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

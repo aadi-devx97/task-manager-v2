@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "task": "Learn JS",
+    "completed": true
+  },
+  {
+    "id": 2,
+    "task": "Build project",
+    "completed": false
+  },
+  {
+    "id": 1777269112309,
+    "task": "AI",
+    "completed": false,
+    "priority": "medium"
+  },
+  {
+    "id": 1777444926150,
+    "task": "CSS",
+    "completed": false,
+    "priority": "medium",
+    "createdAt": "4/29/2026, 12:12:06 PM"
+  },
+  {
+    "id": 1777444947804,
+    "task": "HTML",
+    "completed": false,
+    "priority": "medium",
+    "createdAt": "4/29/2026, 12:12:27 PM"
+  },
+  {
+    "id": 1777444968664,
+    "task": "Python",
+    "completed": false,
+    "priority": "low",
+    "createdAt": "4/29/2026, 12:12:48 PM"
+  },
+  {
+    "id": 1777444992230,
+    "task": "Automation",
+    "completed": false,
+    "priority": "high",
+    "createdAt": "4/29/2026, 12:13:12 PM"
+  }
+]
