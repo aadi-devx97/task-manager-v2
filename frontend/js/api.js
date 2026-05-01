@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://task-manager-backend-e8lr.onrender.com";
 const TASKS_URL = `${BASE_URL}/tasks`;
 
 function loadApiTasks() {
