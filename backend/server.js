@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 const PORT = proccess.env.PORT || 3000;
@@ -10,11 +11,13 @@ app.use(express.json());
 
 // Helper functions
 function getTasks() {
-    return JSON.parse(fs.readFileSync("./data/tasks.json"));
+    const filePath = path.join(__dirname, "data", "tasks.json");
+    return JSON.parse(fs.readFileSync(filePath));
 }
 
 function saveTasks(tasks) {
-    fs.writeFileSync("./data/tasks.json", JSON.stringify(tasks, null, 2));
+    const filePath = path.join(__dirname, "data", "tasks.json");
+    fs.writeFileSync(filePath, JSON.stringify(tasks, null, 2));
 }
 
 // TEST ROUTE (important)
