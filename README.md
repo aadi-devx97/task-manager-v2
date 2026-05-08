@@ -57,4 +57,4 @@ Aadi
 
 ## Live Demp
 
-(Link will be available soon)
+(https://task-manager-aadi.netlify.app/)
